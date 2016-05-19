@@ -1,0 +1,63 @@
+//
+//  PrefixHeader.pch
+//  CustomAnimationDemo
+//
+//  Created by my on 16/3/29.
+//  Copyright © 2016年 base. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <objc/runtime.h>
+#endif /* PrefixHeader_pch */
+
+//rbg转UIColor(16进制)
+#define RGB16(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RGBA16(rgbaValue) [UIColor colorWithRed:((float)((rgbaValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbaValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbaValue & 0xFF))/255.0 alpha:((float)((rgbaValue & 0xFF000000) >> 24))/255.0]
+
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+
+//导航栏颜色
+#define KNAVBARCOLOR RGBACOLOR(255, 48, 48,0.8)
+
+//状态栏、导航栏、标签栏高度
+#define STATUS_HEIGHT ([UIApplication sharedApplication].statusBarFrame.size.height)
+#define NAVIGATIONBAR_HEIGHT (self.navigationController.navigationBar.frame.size.height)
+#define TABBAR_HEIGHT (self.tabBarController.tabBar.frame.size.height)
+//字体颜色
+#define COLOR_FONT_RED   0xD54A45
+#define COLOR_FONT_WHITE 0xFFFFFF
+#define COLOR_FONT_LIGHTWHITE 0xEEEEEE
+#define COLOR_FONT_DARKGRAY  0x555555
+#define COLOR_FONT_GRAY  0x777777
+#define COLOR_FONT_LIGHTGRAY  0x999999
+#define COLOR_FONT_BLACK 0x000000
+
+//背景颜色
+#define COLOR_BG_GRAY      0xEDEDED
+#define COLOR_BG_ALPHABLACK     0x88000000
+#define COLOR_BG_ORANGE 0xf69e21
+#define COLOR_BG_ALPHARED  0x88D54A45
+#define COLOR_BG_LIGHTGRAY 0xEEEEEE
+#define COLOR_BG_ALPHAWHITE 0x55FFFFFF
+#define COLOR_BG_WHITE     0xFFFFFF
+#define COLOR_BG_DARKGRAY     0xAFAEAE
+#define COLOR_BG_RED       0xD54A45
+#define COLOR_BG_BLUE      0x4586DA
+#define COLOR_BG_CLEAR     0x00000000
+
+//屏幕宽高
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define WEAK(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BaseTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = [[BaseTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
+    
+    
+    //不可变数组，不可变拷贝
+    NSArray *arr1 = @[@1,@2,@3];
+    NSArray *arr2 = arr1;
+    NSArray *arr3 = [arr1 copy];
+    NSLog(@"%zd,%zd,%zd",&arr1,&arr2,&arr3);
+    NSLog(@"%zd,%zd,%zd",arr1[0],arr2[0],arr3[0]);
+
+    //不可变数组，可变拷贝
+    NSArray *arr4 = @[@1,@2,@3];
+    NSArray *arr5 = arr4;
+    NSArray *arr6 = [arr4 mutableCopy];
+    NSLog(@"-%zd,%zd,%zd",&arr4,&arr5,&arr6);
+    NSLog(@"%zd,%zd,%zd",arr4[0],arr5[0],arr6[0]);
     return YES;
 }
 

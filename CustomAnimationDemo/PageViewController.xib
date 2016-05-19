@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pageOne" translatesAutoresizingMaskIntoConstraints="NO" id="8vY-HU-U4x">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjX-0c-h02">
+                    <rect key="frame" x="0.0" y="70" width="600" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="J2T-US-fS4"/>
+                    </constraints>
+                    <state key="normal" title="点我或向左滑动PUSH">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushAction:" destination="-1" eventType="touchUpInside" id="MII-y8-nOC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VjX-0c-h02" secondAttribute="trailing" id="Qmf-W7-G4X"/>
+                <constraint firstItem="VjX-0c-h02" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ch1-pt-wxD"/>
+                <constraint firstAttribute="bottom" secondItem="8vY-HU-U4x" secondAttribute="bottom" id="gT5-aC-nmp"/>
+                <constraint firstItem="VjX-0c-h02" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="hZO-3A-lMK"/>
+                <constraint firstAttribute="trailing" secondItem="8vY-HU-U4x" secondAttribute="trailing" id="srf-jc-Myb"/>
+                <constraint firstItem="8vY-HU-U4x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tl8-ZY-uEE"/>
+                <constraint firstItem="8vY-HU-U4x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="wfA-ny-Qv7"/>
+            </constraints>
+            <point key="canvasLocation" x="193" y="325"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pageOne" width="480" height="854"/>
+    </resources>
+</document>
